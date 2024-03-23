@@ -1,3 +1,5 @@
+// we don't need this file
+// will delete it later
 
 // const Home = () => {
 //   return (
