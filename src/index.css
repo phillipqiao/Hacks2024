@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
 
 :root {
-  --primary: #12bca2;
+  --primary: #002145;
   --secondary: #6d15df;
 }
 h1,h2,h3 {
@@ -32,3 +32,35 @@ nav h1 {
   margin: 20px auto;
   padding: 20px;
 }
+
+/* post grid */
+
+.post-grid {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+ }
+ 
+ .post-card {
+  width: 100%;
+  padding: 10px;
+  background: #BCDFF7;
+  box-sizing: border-box;
+  border-radius: 6px;
+  position: relative;
+ }
+ 
+ .post-card .course-name {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  background: var(--secondary);
+  color: #ffffff;
+  border-radius: 6px;
+  width:80px;
+  height: 0;
+  padding: 20px 0;
+  line-height: 0px;
+  text-align: center;
+ }

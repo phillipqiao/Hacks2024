@@ -1,38 +1,47 @@
 import supabase from "../config/supabaseClient";
 import { useEffect, useState } from "react";
 
+//components
+import PostCard from "../Components/PostCard"
+
 const Home = () => {
   const [fetchError, setFetchError] = useState(null);
-  // const [posts, setPosts] = useState(null);
-  const posts = [{ title: "hello" }, { title: "world" }];
+  const [posts, setPosts] = useState(null);
+  //const posts = [{ title: "hello" }, { title: "world" }];
 
-  //   useEffect(() => {
-  //     const fetchPosts = async () => {
-  //       const { data, error } = await supabase.from("studyBuddies").select();
-  //       if (error) {
-  //         setFetchError("Could not fetch the posts");
-  //         setPosts(null);
-  //         console.log(error);
-  //       }
-  //       if (data) {
-  //         setPosts(data);
-  //         setFetchError(null);
-  //       }
-  //     };
+    useEffect(() => {
+      const fetchPosts = async () => {
+        const { data, error } = await supabase
+          .from("studyBuddies")
+          .select();
+        if (error) {
+          setFetchError("Could not fetch the posts");
+          setPosts(null);
+          console.log(error);
+        }
+        if (data) {
+          setPosts(data);
+          setFetchError(null);
+        }
+      };
 
-  //     fetchPosts();
-  //   }, []);
+      fetchPosts();
+    }, []);
 
-  //   console.log(supabase);
+    console.log(supabase);
   return (
     <div className="page home">
-      <h2>Home</h2>
+      <h2>Active Posts</h2>
       {fetchError && <p>{fetchError}</p>}
       {posts && (
         <div className="posts">
-          {posts.map((post) => (
-            <p>{post.title}</p>
-          ))}
+          {/* order by course-dpt or time*/}
+          <div className = "post-grid">
+            {posts.map(post => (
+              // <p>{post.postTitle}</p>
+              <PostCard key = {post.id} post={post}/>
+            ))}
+          </div>
         </div>
       )}
       <p></p>
