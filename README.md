@@ -1,1 +1,2 @@
-# UBC (BCS) Hacks 2024
+# UBC (BCS) Hacks 2024!
+
