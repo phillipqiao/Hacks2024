@@ -1,3 +1,5 @@
+import supabase from "../Config/SupabaseClient"
+
 const Home = () => {
   return (
     <div className="page home">
