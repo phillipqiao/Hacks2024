@@ -11,7 +11,7 @@ function App() {
       <nav>
         <h1>Study Buddies</h1>
         <div>
-          <Link to="/">Search</Link>
+          <Link to="/">Search TEST TEST</Link>
         </div>
         <div>
           <Link to="/create">Create A New Post to find a study partner</Link>
