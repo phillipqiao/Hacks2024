@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import supabase from "../config/supabaseClient"
 
-const PostCard = ({ post }) => {
+const PostCard = ({ post, onDelete }) => {
 
     const handleDelete = async () => {
         
@@ -15,6 +15,7 @@ const PostCard = ({ post }) => {
         }
         if (data) {
           console.log(data)
+          onDelete(post.id)
         }
     }
 

@@ -9,6 +9,13 @@ const Home = () => {
   const [posts, setPosts] = useState(null);
   //const posts = [{ title: "hello" }, { title: "world" }];
 
+  const handleDelete = (id) => {
+    setPosts(prevPosts => {
+      return prevPosts.filter(post => post.id !== id  )
+    })
+
+  }
+
     useEffect(() => {
       const fetchPosts = async () => {
         const { data, error } = await supabase
@@ -26,7 +33,7 @@ const Home = () => {
       };
 
       fetchPosts();
-    }, [posts]);
+    }, []);
 
     console.log(supabase);
   return (
@@ -39,7 +46,7 @@ const Home = () => {
           <div className = "post-grid">
             {posts.map(post => (
               // <p>{post.postTitle}</p>
-              <PostCard key = {post.id} post={post}/>
+              <PostCard key = {post.id} post={post} onDelete={handleDelete}/>
             ))}
           </div>
         </div>

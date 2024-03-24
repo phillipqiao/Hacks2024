@@ -70,13 +70,15 @@ const Create = () => {
           id="contactInfo"
           value={contactInfo}
           onChange={(e) => setContactInfo(e.target.value)}
+          placeholder="e.g. 9-1-1"
         />
 
-        <label htmlFor="description">Description of:</label>
+        <label htmlFor="description">Description :</label>
         <textarea
           id="description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
+          placeholder="e.g. your availability..."
         />
 
         <button>Create New Post!</button>
