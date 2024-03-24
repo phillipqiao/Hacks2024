@@ -15,15 +15,19 @@ function App() {
       </div> */}
 
       <nav>
-      <div>
+        <div>  
+          <Link to="/"><div><div>
         < img className = "logo" src="./logoBuddies.png" alt="Description" />
       </div>
-        <h1 className = "web-name">Study Buddies</h1>
-        <div>
-          <Link to="/">Home</Link>
+      <div>
+        < img className = "logo-text" src="./logoText.png" alt="Description" />
+      </div></div></Link>
         </div>
-        <div>
+        {/* <div>
           <Link to="/create">Create Your Post</Link>
+        </div> */}
+        <div className = "post-button-container">
+          <Link to="/create" className="button-style">Create Your Post</Link>
         </div>
         
       </nav>

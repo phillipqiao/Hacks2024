@@ -61,7 +61,8 @@ const Home = () => {
     console.log(supabase);
   return (
     <div className="page home">
-      <h2>Active Posts</h2>
+      <div className = "post-title"><h1>Active Posts</h1></div>
+      
       
       <input
         type="text"

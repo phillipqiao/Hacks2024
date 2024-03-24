@@ -60,8 +60,9 @@ nav h1 {
   position: absolute;
   top: -10px;
   right: -10px;
-  background: var(--secondary);
-  color: #ffffff;
+  /* background: var(--secondary); */
+  background: var(--primary);
+  color: #fff;
   border-radius: 6px;
   width:80px;
   height: 0;
@@ -209,6 +210,11 @@ a:hover {
   border-radius: 6px;
   font-family: "Poppins";
   cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.order-by button:hover {
+  background: #057BA4;
 }
 
 input[type="text"] {
@@ -231,4 +237,44 @@ input[type="text"]:focus {
 
 .logo {
   width: 10%;
+}
+
+.logo-text {
+  width:30%;
+}
+
+.post-title {
+  text-align: center;
+  font-size: 20px;
+}
+
+/* for creat post button */
+.post-button-container {
+  text-align: right; 
+}
+
+.button-style {
+  padding: 10px 15px;
+  background-color: #28a745; /* Original background color */
+  color: white; /* Text color */
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  position: relative;
+  right: 125px; /* Moves the button 10px to the right */
+  top: -10px;
+  transition: background-color 0.3s; /* Smooth transition for the background color */
+}
+
+.button-style:hover {
+  background-color: #218838; /* New background color when hovered */
+}
+
+/* create button */
+.create-button {
+  transition: background-color 0.3s;
+}
+
+.create-button:hover {
+  background: #057BA4;
 }

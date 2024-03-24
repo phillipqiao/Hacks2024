@@ -82,7 +82,7 @@ const Create = () => {
           placeholder="e.g. your availability..."
         />
 
-        <button>Create New Post!</button>
+        <button className = "create-button">Create New Post!</button>
 
         {formError && <p className="error">{formError}</p >}
       </form>
