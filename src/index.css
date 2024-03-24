@@ -44,7 +44,7 @@ nav h1 {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
- }
+}
  
  .post-card {
   width: 100%;
@@ -278,3 +278,13 @@ input[type="text"]:focus {
 .create-button:hover {
   background: #057BA4;
 }
+
+/* .linkContainer {
+  display: flex;
+  /* align-items:center; */
+  /* justify-content: left; */
+  /* position: relative;
+  right: 400px; /* Moves the button 10px to the right */
+  /* top: 50px; */
+/* } */
+

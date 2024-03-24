@@ -26,7 +26,7 @@ const PostCard = ({ post, onDelete }) => {
         <p>{post.contactInfo}</p>
         <p>{post.description}</p>
         <div className = "course-name">{post.courseDpt}{post.courseCode}</div>
-        <div className="buttons">
+        <div className = "buttons">
         <Link to={"/" + post.id}>
           <i className="material-icons">edit</i>
         </Link>

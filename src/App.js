@@ -15,7 +15,7 @@ function App() {
       </div> */}
 
       <nav>
-        <div>  
+        <div className="linkContainer">  
           <Link to="/"><div><div>
         < img className = "logo" src="./logoBuddies.png" alt="Description" />
       </div>
