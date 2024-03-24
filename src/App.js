@@ -4,18 +4,23 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Create from "./pages/Create";
 import Update from "./pages/Update";
+// import SearchBar from "./Components/SearchBar"
 
 
 function App() {
   return (
     <BrowserRouter>
+      {/* <div className="App">
+        <SearchBar placeholder="Enter a Sourse Name..."/>
+      </div> */}
+
       <nav>
         <h1 className = "web-name">Study Buddies</h1>
         <div>
-          <Link to="/">Search Courses</Link>
+          <Link to="/">Home</Link>
         </div>
         <div>
-          <Link to="/create">Create A New Post to find a study partner</Link>
+          <Link to="/create">Create Your Post</Link>
         </div>
         
       </nav>
