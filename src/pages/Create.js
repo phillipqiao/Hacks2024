@@ -5,7 +5,6 @@ import supabase from "../config/supabaseClient"
 const Create = () => {
   const navigate = useNavigate()
 
-
   const [postTitle, setPostTitle] = useState('')
   const [courseDpt, setCourseDpt] = useState('')
   const [courseCode, setCourseCode] = useState('')
@@ -23,7 +22,7 @@ const Create = () => {
 
     const { data, error } = await supabase
       .from('studyBuddies')
-      .insert([{ postTitle, courseDpt, courseCode, contactInfo, description}])
+      .insert([{ postTitle, courseDpt, courseCode, contactInfo, description}]).select()
 
     if (error) {
       console.log(error)
@@ -39,7 +38,7 @@ const Create = () => {
   return (
     <div className="page create">
       <form onSubmit={handleSubmit}>
-        <label htmlFor="postTitle">postTitle:</label>
+        <label htmlFor="postTitle">Post Title:</label>
         <input 
           type="text" 
           id="postTitle"
@@ -47,31 +46,34 @@ const Create = () => {
           onChange={(e) => setPostTitle(e.target.value)}
         />
 
-        <label htmlFor="courseDpt">courseDpt:</label>
-        <textarea 
+        <label htmlFor="courseDpt">Subject : </label>
+        <input 
+          type="text"
           id="courseDpt"
           value={courseDpt}
           onChange={(e) => setCourseDpt(e.target.value)}
+          placeholder="e.g. CPSC"
         />
 
-        <label htmlFor="courseCode">courseCode:</label>
+        <label htmlFor="courseCode">Course # : </label>
         <input 
           type="text"
           id="courseCode"
           value={courseCode}
           onChange={(e) => setCourseCode(e.target.value)}
+          placeholder="e.g. 210"
+
         />
 
-        <label htmlFor="contactInfo">contactInfo:</label>
+        <label htmlFor="contactInfo">Contact Info:</label>
         <textarea 
           id="contactInfo"
           value={contactInfo}
           onChange={(e) => setContactInfo(e.target.value)}
         />
 
-        <label htmlFor="description">description:</label>
-        <input 
-          type="text"
+        <label htmlFor="description">Description of:</label>
+        <textarea
           id="description"
           value={description}
           onChange={(e) => setDescription(e.target.value)}
