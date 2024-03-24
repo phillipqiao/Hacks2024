@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <nav>
-        <h1>Study Buddies</h1>
+        <h1 className = "web-name">Study Buddies</h1>
         <div>
           <Link to="/">Search TEST TEST</Link>
         </div>

@@ -13,7 +13,7 @@ const Home = () => {
       const fetchPosts = async () => {
         const { data, error } = await supabase
           .from("studyBuddies")
-          .select();
+          .select().order('id', {ascending: true});
         if (error) {
           setFetchError("Could not fetch the posts");
           setPosts(null);
@@ -26,7 +26,7 @@ const Home = () => {
       };
 
       fetchPosts();
-    }, []);
+    }, [posts]);
 
     console.log(supabase);
   return (

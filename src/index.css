@@ -8,6 +8,10 @@ h1,h2,h3 {
   margin: 0;
 }
 
+.web-name {
+  font-family: 'ARIAL';
+}
+
 body {
   margin: 0;
   color: #333;
@@ -49,6 +53,7 @@ nav h1 {
   box-sizing: border-box;
   border-radius: 6px;
   position: relative;
+  border: 2px solid #057BA4;
  }
  
  .post-card .course-name {
@@ -103,5 +108,20 @@ form button {
   border-radius: 6px;
   padding: 6px 8px;
   font-family: "Poppins";
+  cursor: pointer;
+}
+.post-card .buttons {
+  /* text-align: right; */
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+.post-card i {
+  color: #bbb;
+  margin-left: 10px;
+  font-size: 1.2em;
+  padding: 6px;
+  background: #eee;
+  border-radius: 50%;
   cursor: pointer;
 }
