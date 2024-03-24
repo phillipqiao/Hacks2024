@@ -25,7 +25,7 @@ const Home = () => {
     }
 
     const filtered = posts.filter((post) =>
-      post.courseDpt.toLowerCase().includes(query.toLowerCase())
+      post.courseName.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredPosts(filtered);
   };
@@ -62,12 +62,15 @@ const Home = () => {
   return (
     <div className="page home">
       <h2>Active Posts</h2>
+      
       <input
         type="text"
-        placeholder="Search Courses..."
+        placeholder="🔍 Search Courses..."
+        
         value={searchDpt}
         onChange={handleSearchDpt}
       />
+      
       
       {fetchError && <p>{fetchError}</p>}
       {filteredPosts && (
@@ -76,12 +79,12 @@ const Home = () => {
             <p>Order by:</p>
             <button onClick={() => setOrderBy('created_at')}>Time Created</button>
             <button onClick={() => setOrderBy('courseDpt')}>Subject </button>
-
+            
           </div>
           <div className="post-grid">
             {filteredPosts.map((post) => (
               // <p>{post.postTitle}</p >
-              <PostCard key={post.id} post={post} setPosts={setPosts} />
+              <PostCard key={post.id} post={post} onDelete={handleDelete} />
             ))}
           </div>
         </div>
@@ -97,7 +100,7 @@ const Home = () => {
           <div className="post-grid">
             {posts.map((post) => (
               // <p>{post.postTitle}</p >
-              <PostCard key={post.id} post={post} setPosts={setPosts} />
+              <PostCard key={post.id} post={post} onDelete={handleDelete} />
             ))}
           </div>
         </div>

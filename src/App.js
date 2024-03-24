@@ -15,6 +15,9 @@ function App() {
       </div> */}
 
       <nav>
+      <div>
+        < img className = "logo" src="./logoBuddies.png" alt="Description" />
+      </div>
         <h1 className = "web-name">Study Buddies</h1>
         <div>
           <Link to="/">Home</Link>

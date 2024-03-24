@@ -20,9 +20,10 @@ const Create = () => {
       return
     }
 
+    const courseName = courseDpt + courseCode;
     const { data, error } = await supabase
       .from('studyBuddies')
-      .insert([{ postTitle, courseDpt, courseCode, contactInfo, description}]).select()
+      .insert([{ postTitle, courseDpt, courseCode,courseName, contactInfo, description}]).select()
 
     if (error) {
       console.log(error)
