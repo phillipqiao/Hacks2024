@@ -67,11 +67,12 @@ nav h1 {
 
  /* forms  - David */
 form {
-  background: #fff;
+  background: #ffffff;
   padding: 20px;
   max-width: 480px;
   margin: 0 auto;
   border-radius: 6px;
+  font-weight: bold;
 }
 form textarea {
   display: block;
@@ -82,6 +83,8 @@ form textarea {
   border: 1px solid #ccc;
   margin: 10px 0 20px 0;
   resize: none;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
 }
 
 form input {

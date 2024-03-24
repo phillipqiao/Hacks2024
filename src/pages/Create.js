@@ -79,7 +79,7 @@ const Create = () => {
           onChange={(e) => setDescription(e.target.value)}
         />
 
-        <button>Create Smoothie Recipe</button>
+        <button>Create New Post!</button>
 
         {formError && <p className="error">{formError}</p >}
       </form>
