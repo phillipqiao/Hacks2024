@@ -9,6 +9,7 @@ const PostCard = ({ post, onDelete }) => {
           .from('studyBuddies')
           .delete()
           .eq('id', post.id)
+          .select()
         
         if (error) {
           console.log(error)

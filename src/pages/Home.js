@@ -11,7 +11,7 @@ const Home = () => {
 
   const handleDelete = (id) => {
     setPosts(prevPosts => {
-      return prevPosts.filter(post => post.id !== id  )
+      return prevPosts.filter(post => post.id !== id)
     })
 
   }
@@ -46,7 +46,10 @@ const Home = () => {
           <div className = "post-grid">
             {posts.map(post => (
               // <p>{post.postTitle}</p>
-              <PostCard key = {post.id} post={post} onDelete={handleDelete}/>
+              <PostCard 
+              key={post.id} 
+              post={post} 
+              onDelete={handleDelete}/>
             ))}
           </div>
         </div>
